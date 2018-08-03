@@ -1,0 +1,14 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let testuser of testuserService.testuserList">
+    <td>{{testuser.Name}}</td>
+    <td>{{testuser.Address}}</td>
+    <td>
+      <a class="btn" (click)="showForEdit(testuser)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(testuser.Id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>
